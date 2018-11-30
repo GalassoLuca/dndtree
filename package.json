@@ -1,0 +1,25 @@
+{
+  "name": "dndtree",
+  "version": "1.0.0",
+  "description": "Working demo of tree implementation with D3js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GalassoLuca/dndtree.git"
+  },
+  "keywords": [
+    "javascript",
+    "d3js",
+    "node"
+  ],
+  "author": "Luca Galasso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GalassoLuca/dndtree/issues"
+  },
+  "homepage": "https://github.com/GalassoLuca/dndtree#readme"
+}
