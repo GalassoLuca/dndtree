@@ -26,9 +26,10 @@ INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
     EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
 
 /* global d3 */
+/* global $ */
 
-// Get JSON data
-d3.json('./data/flare.json', function (error, treeData) {
+// Load JSON data
+function loadTreeData (error, treeData) {
   if (error) {
     console.log(error.stack)
     return
@@ -621,4 +622,42 @@ d3.json('./data/flare.json', function (error, treeData) {
   // Layout the tree initially and center on the root node.
   update(root)
   centerNode(root)
+}
+
+// d3.json('./data/flare.json', loadTreeData)
+
+const treeData = {
+  'name': 'flare',
+  'children': [
+    {
+      'name': 'analytics',
+      'children': [
+        {
+          'name': 'cluster',
+          'children': [
+            {
+              'name': 'AgglomerativeCluster',
+              'size': 3938
+            },
+            {
+              'name': 'CommunityStructure',
+              'size': 3812
+            },
+            {
+              'name': 'HierarchicalCluster',
+              'size': 6714
+            },
+            {
+              'name': 'MergeEdge',
+              'size': 743
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+$(document).ready(function () {
+  loadTreeData(undefined, treeData)
 })
